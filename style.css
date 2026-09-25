@@ -1,27 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+:root{
+    --cores-laranja:  #df8d13; 
+    --cores-roxo:  #8811ff;
+    --cores-azul: #3d62e5 ;
+    --cores-verde: #76beac  ;
+    --cores-rosa:  #a9129f;
+    --cores-amarelo: #dfdc13 ;
+    --font-montserrt: "Montserrat", sans-serif;
+    --font-heny-penny: "Henny Penny", system-ui;
+    --fonte-grande: 72px;
+    --fonte-media: 22px;
+    --fonte-paquena: 12px;
+}  
+*{font-family: var(--font-montserrt);}
 h1{
-    margin: 0;
+     margin: 0;
     text-align: center;
-    margin-bottom: 180px;
-    background-color: #c79449;
+     margin-bottom: 180px; 
+    /* background: radial-gradient(circle, var(--cores-amarelo) 0%,var(--cores-azul) 16%,var(--cores-laranja) 32%,var(--cores-rosa) 48%,var(--cores-roxo) 62%,var(--cores-verde) 100%); */
+    font-size: var(--fonte-grande) ;
+    
 }
-    
-    
-
-
 img{
-    width: 180px; 
-    height: 180px; 
+    width: 250px; 
+    height: 250px; 
     border: 3px solid #010a13; 
+    align-items: center;
+    text-align: center;
     
 }
-section{
+
+body {
+    background: radial-gradient(circle, var(--cores-amarelo) 0%,var(--cores-azul) 16%,var(--cores-laranja) 32%,var(--cores-rosa) 48%,var(--cores-roxo) 62%,var(--cores-verde) 100%);
+
+
+
+     
+}
+
+.gradient{
+    background: linear-gradient(90deg, #8811ff,  #3d62e5 0%, #76beac 55%, #a9129f 100%,);
     text-align: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly ;
-    gap: 30px;
     display: flex;
+     flex-wrap: wrap; 
+    flex-direction: row;
+    justify-content: center ;
+    gap: 30px;
 }
-body{
-    background-color: #df8d13;
+.botao-card{
+    width: 100px; 
+    height: 30px; 
+    border: 2px solid #010a13;
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;
+    text-align: center;
+    
+     
+   
 }
+
+
+@media (max-width: 1024px) { 
+        .gradient{ grid-template-columns: (3, 1fr);
+        background-color: #a9129f;
+        }
+      }
+      @media (max-width: 768px) { 
+        .gradient{ grid-template-columns: (2, 1fr);
+         background-color: #dfdc13;
+        width: 100%;} 
+        h1{font-size: var(--fonte-media);
+        font-family: var(--font-heny-penny);}
+      }
+         @media (max-width: 480px) { 
+        .gradient{ grid-template-columns: 1fr;
+         background-color: var(--cores-verde);
+        width: 100%;} }
+        h1{font-family: var(--fonte-media);}
